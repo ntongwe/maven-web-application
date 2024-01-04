@@ -26,8 +26,8 @@ node{
     }
     stage('6.6ManualApproval'){
         sh "echo 'Please review the application performance' "
-        //timeout(time:600, unit:'MINUTES') {
-        //input message: 'Application ready for deployment, Please review and approve'
+        timeout(time:600, unit:'MINUTES') {
+        input message: 'Application ready for deployment, Please review and approve'
       }       
     }
     stage('5.Deploy2UAT'){
